@@ -13,7 +13,7 @@ var normalizedPath = require("path").join(__dirname, './scripts'),
 require(normalizedPath + '/templates.js');
 
 // setup the angular app module
-const app = angular.module('app', ['localytics.directives', 'templates', 'ui.router', 'electangular']);
+const app = angular.module('boilerplate', ['localytics.directives', 'templates', 'ui.router', 'electangular']);
 
 // setup routing
 app.config(function ($stateProvider, $urlRouterProvider) {

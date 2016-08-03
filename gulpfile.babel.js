@@ -5,6 +5,7 @@ import {
 }
 from 'child_process';
 import gulp from 'gulp';
+import del from 'del';
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import extend from 'xtend';
@@ -30,6 +31,10 @@ const build = {
 };
 
 const dest = './build';
+
+gulp.task('clean:bower', () => {
+    return del(['lib/**/*']);
+});
 
 gulp.task('bower', cb =>
     gulp.src('./src/bower.json')
