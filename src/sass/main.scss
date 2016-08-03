@@ -1,0 +1,16 @@
+.main {
+
+    &.nav {
+      display: flex;
+      list-style: none;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    &.nav a {
+      display: block;
+      flex: auto;
+    }
+
+}
