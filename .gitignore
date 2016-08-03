@@ -1,8 +1,8 @@
 *.log
-node_modules
+node_modules/
 dist
 /css
 
 /src/bower_components
 /bin/*.js
-/build/
+build/
