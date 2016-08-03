@@ -8,7 +8,7 @@ var normalizedPath = require("path").join(__dirname, './scripts'),
 require(normalizedPath + '/templates.js');
 
 // setup the angular app module
-var app = angular.module('app', ['ui.mask', 'localytics.directives', 'templates', 'ui.router', 'electangular']);
+var app = angular.module('app', ['localytics.directives', 'templates', 'ui.router', 'electangular']);
 
 // setup routing
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -56,38 +56,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             '': {
                 templateUrl: './templates/tab4.html'
-            },
-            'nav': navView
-        }
-    }).state('tab5', {
-        url: '/tab5',
-        views: {
-            '': {
-                templateUrl: './templates/tab5.html'
-            },
-            'nav': navView
-        }
-    }).state('tab6', {
-        url: '/tab6',
-        views: {
-            '': {
-                templateUrl: './templates/tab6.html'
-            },
-            'nav': navView
-        }
-    }).state('tab7', {
-        url: '/tab7',
-        views: {
-            '': {
-                templateUrl: './templates/tab7.html'
-            },
-            'nav': navView
-        }
-    }).state('tab8', {
-        url: '/tab8',
-        views: {
-            '': {
-                templateUrl: './templates/tab8.html'
             },
             'nav': navView
         }

@@ -6,7 +6,6 @@ This is a boilerplate to create kiosk applications using Electron and Angular 1.
 npm install
 cd src
 bower install
-
 ```
 
 Cheers!

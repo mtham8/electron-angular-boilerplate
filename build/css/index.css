@@ -5813,3 +5813,14 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.main.nav {
+  display: flex;
+  list-style: none;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0; }
+
+.main.nav a {
+  display: block;
+  flex: auto; }

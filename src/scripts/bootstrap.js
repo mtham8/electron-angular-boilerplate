@@ -13,7 +13,7 @@ var normalizedPath = require("path").join(__dirname, './scripts'),
 require(normalizedPath + '/templates.js');
 
 // setup the angular app module
-const app = angular.module('app', ['ui.mask', 'localytics.directives', 'templates', 'ui.router', 'electangular']);
+const app = angular.module('app', ['localytics.directives', 'templates', 'ui.router', 'electangular']);
 
 // setup routing
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -70,46 +70,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 '': {
                     templateUrl: './templates/tab4.html',
                     // controller: 'Tab4Controller'
-                },
-                'nav': navView
-            }
-        })
-        .state('tab5', {
-            url: '/tab5',
-            views: {
-                '': {
-                    templateUrl: './templates/tab5.html',
-                    // controller: 'Tab5Controller'
-                },
-                'nav': navView
-            }
-        })
-        .state('tab6', {
-            url: '/tab6',
-            views: {
-                '': {
-                    templateUrl: './templates/tab6.html',
-                    // controller: 'Tab6Controller'
-                },
-                'nav': navView
-            }
-        })
-        .state('tab7', {
-            url: '/tab7',
-            views: {
-                '': {
-                    templateUrl: './templates/tab7.html',
-                    // controller: 'Tab7Controller'
-                },
-                'nav': navView
-            }
-        })
-        .state('tab8', {
-            url: '/tab8',
-            views: {
-                '': {
-                    templateUrl: './templates/tab8.html',
-                    // controller: 'Tab8Controller'
                 },
                 'nav': navView
             }
