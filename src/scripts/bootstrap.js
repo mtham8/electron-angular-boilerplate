@@ -1,11 +1,11 @@
-var normalizedPath = require("path").join(__dirname, './scripts'),
+var normalizedPath = require("path").join(__dirname, './js/angular'),
     files = [
         '/controllers/mainController.js',
         '/controllers/tab1Controller.js',
-        '/controllers/tab2Controller.js',
-        '/controllers/tab3Controller.js',
-        '/controllers/tab4Controller.js',
-        '/controllers/component1Controller.js'
+        // '/controllers/tab2Controller.js',
+        // '/controllers/tab3Controller.js',
+        // '/controllers/tab4Controller.js',
+        // '/controllers/component1Controller.js'
     ];
 
 // load the cached templates
@@ -13,7 +13,7 @@ var normalizedPath = require("path").join(__dirname, './scripts'),
 require(normalizedPath + '/templates.js');
 
 // setup the angular app module
-const app = angular.module('boilerplate', ['localytics.directives', 'templates', 'ui.router', 'electangular']);
+const app = angular.module('boilerplate', ['templates', 'ui.router', 'electangular']);
 
 // setup routing
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -80,21 +80,8 @@ var navView = {
     templateUrl: './templates/nav.html'
 }
 
-// setup config that can be used in
-// controllers, directives, services, and factories
-app.constant('config', {
-    leadgen_remote_server: 'http://lg3.gpjconnect.com',
-    contentful_space: 'fl733vlxyp2b',
-    contentful_accessToken: '4f928dad11d95e949eba27329225ddaa754c581c9adb1da93c8a530b30abf757',
-    home_path: require("path").join(__dirname, '/')
-});
-
 // loop through all the files
 // and require them
 for (var i = 0, length = files.length; i < length; i++) {
     require(normalizedPath + files[i]);
 }
-
-$(function() {
-    $('body').removeClass('js-not-ready');
-});

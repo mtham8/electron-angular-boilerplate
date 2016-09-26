@@ -21,7 +21,6 @@
     "angular": "^1.5.8",
     "jquery": "^3.1.0",
     "components-font-awesome": "^4.6.3",
-    "angular-chosen-localytics": "^1.4.3",
     "bootstrap": "^3.3.7",
     "angular-ui-router": "^0.3.1",
     "bootstrap-sass": "^3.3.7"

@@ -9,13 +9,12 @@
         <script src="./lib/angular/angular.js"></script>
         <script src="./lib/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="./lib/chosen/chosen.jquery.js"></script>
-        <script src="./lib/angular-chosen-localytics/dist/angular-chosen.js"></script>
-        <script src="./js/angular/electangular.js"></script>
-        <script src="./js/angular/bootstrap.js"></script>
+        <script src="./js/electangular.js"></script>
+        <script src="./js/bootstrap.js"></script>
     </head>
-    <body ng-class="{'in-app':($root.page && $root.page != ''), 'in-admin': (!$root.page || $root.page == '')}">
+    <body>
         <!-- build:remove -->
-        <script>
+<!--         <script>
         if (process.env.BROWSER_SYNC_CLIENT_URL) {
             const current = document.currentScript;
             const script = document.createElement('script');
@@ -23,7 +22,7 @@
             script.async = true;
             current.parentNode.insertBefore(script, current);
         }
-        </script>
+        </script> -->
         <!-- endbuild -->
 
         <div ui-view="nav"></div>

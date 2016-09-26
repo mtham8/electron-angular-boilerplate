@@ -1,9 +1,6 @@
 'use strict';
 
-import {
-    spawn
-}
-from 'child_process';
+import { spawn } from 'child_process';
 import gulp from 'gulp';
 import del from 'del';
 import browserSync from 'browser-sync';
@@ -15,7 +12,7 @@ const $ = gulpLoadPlugins();
 const src = {
     html: ['./src/**/*.html'],
     sass: ['./src/sass/**/*.scss'],
-    js: ['./src/scripts/**/*.js'],
+    js: ['./src/js/**/*.js'],
     assets: ['./src/assets/**/*'],
     images: ['./src/images/**/*.jpg', './src/images/**/*.png', './src/images/**/*.gif', './src/images/**/*.svg']
 };
@@ -60,7 +57,6 @@ gulp.task('angularTemplateCache', cb =>
 
 gulp.task('copy:html', ['angularTemplateCache'], cb =>
     gulp.src(src.html)
-    .pipe($.if(process.env.NODE_ENV === 'production', $.useref()))
     .pipe(gulp.dest(build.dir))
 );
 

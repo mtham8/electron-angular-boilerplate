@@ -4,9 +4,7 @@ const app = electron.app;
 const isDev = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 const electronLocalshortcut = require('electron-localshortcut');
-const {
-    ipcMain
-} = require('electron');
+const { ipcMain } = require('electron');
 
 // we need a reference to this object the entire time this application runs
 let mainWindow;
