@@ -10,7 +10,7 @@ import extend from 'xtend';
 const $ = gulpLoadPlugins();
 
 const src = {
-    html: ['./src/templates/*.html'],
+    html: ['./src/**.html'],
     sass: ['./src/sass/**/*.scss'],
     js: ['./src/js/**/*.js'],
     assets: ['./src/assets/**/*'],
