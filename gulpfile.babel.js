@@ -10,7 +10,7 @@ import extend from 'xtend';
 const $ = gulpLoadPlugins();
 
 const src = {
-    html: ['./src/**/*.html'],
+    html: ['./src/templates/*.html'],
     sass: ['./src/sass/**/*.scss'],
     js: ['./src/js/**/*.js'],
     assets: ['./src/assets/**/*'],
@@ -48,11 +48,11 @@ gulp.task('scripts', cb =>
 );
 
 gulp.task('angularTemplateCache', cb =>
-    gulp.src('./src/templates/**/*.html')
+    gulp.src('./src/templates/*.html')
     .pipe($.angularTemplatecache({
         standalone: true
     }))
-    .pipe(gulp.dest('./build/js/angular'))
+    .pipe(gulp.dest('./build/js'))
 );
 
 gulp.task('copy:html', ['angularTemplateCache'], cb =>
