@@ -52,7 +52,7 @@ gulp.task('angularTemplateCache', cb =>
     .pipe($.angularTemplatecache({
         standalone: true
     }))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js/angular'))
 );
 
 gulp.task('copy:html', ['angularTemplateCache'], cb =>
