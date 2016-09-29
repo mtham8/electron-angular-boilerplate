@@ -28,10 +28,6 @@ function runBat(path) {
 }
 
 function createWindow() {
-    // default the process env to production
-    if (process.env.NODE_ENV === '') {
-        process.env.NODE_ENV = 'production';
-    }
 
     let browserAttribs = {
         width: 800,
